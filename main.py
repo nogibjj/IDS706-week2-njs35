@@ -1,4 +1,5 @@
+from pandas_script import get_csv_stats
 
 
-def func(x):
-    return x + 1
+# View the dataset statistics
+print(get_csv_stats())
