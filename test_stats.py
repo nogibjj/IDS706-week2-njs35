@@ -1,5 +1,6 @@
 from pandas_script import get_csv_stats
+import pandas as pd
 
 
 def test_stats_type():
-    assert get_csv_stats().type == 'DataFrame'
+    assert isinstance(get_csv_stats(), pd.DataFrame)
