@@ -10,6 +10,9 @@ This project builds upon the GitHub template created in Week 1. The Pandas libra
 ### Fish Species Counts in CSV
 ![Alt text](img/species_distribution.png)
 
+### Descriptive Statistics
+![Alt text](img/data_snippet.png)
+
 ### Makefile Pass results
 - `make install`
 ![Alt text](img/install_result.png)
