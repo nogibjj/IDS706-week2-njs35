@@ -42,9 +42,7 @@ def save_species_count_plot() -> None:
     ax.set_title("Distribution of Species")
     ax.set_xlabel("Species")
     ax.set_ylabel("Count")
-    ax.set_xticklabels(
-        species_counts.index, rotation=45, ha="right"
-    )  
+    ax.set_xticklabels(species_counts.index, rotation=45, ha="right")
     for i, v in enumerate(species_counts):
         ax.text(
             i, v + 5, str(v), ha="center", va="bottom", fontsize=12, fontweight="bold"
@@ -54,3 +52,11 @@ def save_species_count_plot() -> None:
     ax.grid(axis="y", linestyle="--", alpha=0.7)
     plt.tight_layout()
     plt.savefig("img/species_distribution.png", dpi=300)
+
+
+def write_stats_to_markdown() -> None:
+    """Write the statistics to a Markdown file."""
+    stats = get_csv_stats()
+    # Save the summary stats to a markdown file
+    with open("summary_stats.md", "w", encoding="utf-8") as f:
+        f.write(stats.to_markdown())

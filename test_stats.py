@@ -45,3 +45,5 @@ def test_main(capsys):
     captured = capsys.readouterr()
     assert captured.out.startswith("Fish statistics")
     assert "Species statistics" in captured.out
+    assert os.path.isfile("img/species_distribution.png")
+    assert os.path.isfile("summary_stats.md")
